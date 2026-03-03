@@ -1,1 +1,0 @@
-print("adcs project")
