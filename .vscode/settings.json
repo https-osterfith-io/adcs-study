@@ -1,4 +1,9 @@
 {
     "gpu-monitor.selectedGpuIndex": 2,
-    "cloudcode.verboseLogging": true
+    "cloudcode.verboseLogging": true,
+    "editor.defaultFormatter": "Sixth.sixth-ai",
+    "notebook.defaultFormatter": "googlecloudtools.cloudcode",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
