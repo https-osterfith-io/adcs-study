@@ -1,0 +1,20 @@
+# Deploying to Google Cloud
+
+I noticed that your project directory contains an [app.yaml](file:///c:/Users/tpc10/Desktop/project/adcs-study/app.yaml) file, which is the configuration file used for deploying applications to **Google App Engine**.
+
+## Proposed Actions
+
+I will deploy this application using the `gcloud app deploy` command.
+
+### Deployment details
+
+*   Target platform: **Google App Engine (Standard Environment)**
+*   GCP Project: `peppy-gist-488908-q8`
+*   Runtime: Python 3.14 (based on [app.yaml](file:///c:/Users/tpc10/Desktop/project/adcs-study/app.yaml))
+
+## User Review Required
+
+> [!WARNING]
+> The [app.yaml](file:///c:/Users/tpc10/Desktop/project/adcs-study/app.yaml) specifies `runtime: python314`. According to GCP documentation, currently the latest supported Python version for App Engine Standard is usually Python 3.12 or 3.11. A completely invalid runtime might cause the deployment to be rejected.
+
+Are you ready for me to proceed with the `gcloud app deploy` command? If the deployment fails due to the runtime version, we can modify the [app.yaml](file:///c:/Users/tpc10/Desktop/project/adcs-study/app.yaml) and try again.
