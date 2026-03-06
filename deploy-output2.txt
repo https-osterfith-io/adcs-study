@@ -1,0 +1,15 @@
+WARNING: You might be using automatic scaling for a standard environment deployment, without providing a value for automatic_scaling.max_instances. Starting from March, 2025, App Engine sets the automatic scaling maximum instances default for standard environment deployments to 20. This change doesn't impact existing apps. To override the default, specify the new max_instances value in your app.yaml file, and deploy a new version or redeploy over an existing version. For details on max_instances, see https://cloud.google.com/appengine/docs/standard/reference/app-yaml.md#scaling_elements. 
+
+Services to deploy:
+
+descriptor:                  [C:\Users\tpc10\Desktop\project\adcs-study\app.yaml]
+source:                      [C:\Users\tpc10\Desktop\project\adcs-study]
+target project:              [peppy-gist-488908-q8]
+target service:              [default]
+target version:              [20260306t120021]
+target url:                  [https://peppy-gist-488908-q8.de.r.appspot.com]
+target service account:      [adcsproject@peppy-gist-488908-q8.iam.gserviceaccount.com]
+
+
+Beginning deployment of service [default]...
+ERROR: (gcloud.app.deploy) B instance [peppy-gist-488908-q8.appspot.com] not found: The specified bucket does not exist. This command is authenticated as lisa.yu@osterfith.io which is the active account specified by the [core/account] property.

@@ -1,0 +1,18 @@
+You are creating an app for project [peppy-gist-488908-q8].
+WARNING: Creating an App Engine application for a project is irreversible and the region
+cannot be changed. More information about regions is at
+<https://cloud.google.com/appengine/docs/locations>.
+
+WARNING: Starting from March, 2025, App Engine sets the automatic scaling maximum instances
+default for standard environment deployments to 20. This change doesn't impact
+existing apps. To override the default, specify the new max_instances value in your
+app.yaml file, and deploy a new version or redeploy over an existing version.
+For more details on max_instances, see
+<https://cloud.google.com/appengine/docs/standard/reference/app-yaml.md#scaling_elements>.
+
+NOTE: Cloud Run offers the most modern fully managed application hosting experience
+with lower minimum billable times and support for GPUs on demand for your AI/ML workloads.
+Deploy code written in any programming language supported by App Engine on Cloud Run.
+Learn more at https://cloud.google.com/run/docs/quickstarts#build-and-deploy-a-web-service
+
+ERROR: (gcloud.app.create) The project [peppy-gist-488908-q8] already contains an App Engine application. You can deploy your application using `gcloud app deploy`.

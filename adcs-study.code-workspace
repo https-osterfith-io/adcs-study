@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cloudcode.verboseLogging": true,
+		"notebook.defaultFormatter": "googlecloudtools.cloudcode"
+	}
+}
