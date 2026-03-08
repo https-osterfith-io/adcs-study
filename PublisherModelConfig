@@ -1,0 +1,20 @@
+# Specify the preview version of GenerativeModel
+import vertexai
+from vertexai.preview.generative_models import(
+    GenerativeModel,
+    )
+
+PROJECT_ID = "peppy-gist-488908-q8"
+LOCATION = "asia-east1"
+
+vertexai.init(project="peppy-gist-488908-q8", location="asia-east1")
+
+publisher_model = GenerativeModel("claude-sonnet-4-6")
+
+# Set logging configuration
+publisher_model.set_request_response_logging_config(
+    enabled=True,
+    sampling_rate=1.0,
+    bigquery_destination="bq://peppy-gist-488908-q8.adcs_data.adcs_telemetry",
+    enable_otel_logging=True
+    )

@@ -34,3 +34,5 @@ if __name__ == "__main__":
     import uvicorn
     # 執行 Uvicorn 伺服器，預設綁定 127.0.0.1:8000
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
+# 

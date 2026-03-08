@@ -1,0 +1,36 @@
+import vertexai
+
+# 根據先前的配置檔案引入已定義好的 model
+from PublisherModelConfig import publisher_model
+
+def fetch_model_response(prompt: str) -> str:
+    """
+    呼叫模型進行推論 (Inference)
+    """
+    try:
+        # 使用 generate_content 來送出 request 
+        # (注意：如果是 Vertex AI Model Garden 上的 Anthropic Claude 模型，
+        # 通常需要透過 Anthropic SDK 來呼叫，這裡先假設該 endpoint 或 model 
+        # 支援與 GenerativeModel 相容的 API)
+        response = publisher_model.generate_content(prompt)
+        return response.text
+    except Exception as e:
+        print(f"呼叫模型時發生錯誤: {e}")
+        # 如果發生不支援的錯誤，提供正確調用 Claude 的提示
+        print("\n如果發生 API 不支援的錯誤，請確認您使用的「claude-sonnet-4-6」端點設定是否正確。")
+        print("一般在 Vertex AI 調用 Claude 3.5 Sonnet 時，通常需要使用 AnthropicVertex 客戶端，例如：")
+        print("from anthropic import AnthropicVertex")
+        print("client = AnthropicVertex(region='asia-east1', project_id='peppy-gist-488908-q8')")
+        print("client.messages.create(model='claude-3-5-sonnet@20240620', ...)")
+        return ""
+
+if __name__ == "__main__":
+    test_prompt = "請簡短介紹衛星的姿態判定與控制系統 (ADCS)。"
+    print(f"提示詞 Prompt: {test_prompt}\n")
+    print("正在請求模型回應 (Connecting to claude-sonnet-4-6)...\n")
+    
+    result = fetch_model_response(test_prompt)
+    if result:
+        print("===== 模型回應 =====")
+        print(result)
+        print("====================")
